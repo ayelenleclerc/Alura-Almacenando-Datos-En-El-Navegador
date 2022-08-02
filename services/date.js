@@ -1,0 +1,7 @@
+export const uniqueDate = (tasks) => {
+  const unique = [];
+  tasks.forEach((task) => {
+    if (!unique.includes(task.dateFormat)) unique.push(task.dateFormat);
+  });
+  return unique;
+};
