@@ -5,3 +5,11 @@ export const uniqueDate = (tasks) => {
   });
   return unique;
 };
+
+export const orderDates = (dates) => {
+  return dates.sort((a, b) => {
+    const dateA = moment(a, "DD/MM/YYYY");
+    const dateB = moment(b, "DD/MM/YYYY");
+    return dateA - dateB;
+  });
+};
